@@ -8,9 +8,8 @@ func CanConstruct(ransomNote string, magazine string) bool {
 	for _, value := range ransomNote {
 		if i, present := hash[value]; (!present) || i <= 0 {
 			return false
-		} else {
-			hash[value]--
 		}
+		hash[value]--
 	}
 	return true
 }
